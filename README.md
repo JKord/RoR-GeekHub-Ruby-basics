@@ -1,5 +1,6 @@
 RoR GeekHub Ruby basics
 =======================
 
-==Tasks:
+Tasks:
+=============
 1) Homework 1
