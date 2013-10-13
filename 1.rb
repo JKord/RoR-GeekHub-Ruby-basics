@@ -1,7 +1,7 @@
 puts "Vvedit kilkist secund:"
 sekonds = Integer(gets.chomp)
 
-year = sekonds / 31556925.9747
+year = sekonds / 31556925.9747 # 365 діб 6 годин 9 хв. 9.7676 с.
 month = sekonds / 2548800
 day = sekonds / 86400
 hours = sekonds / 3600
