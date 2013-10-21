@@ -1,14 +1,70 @@
-puts "Vvedit kilkist secund:"
-sekonds = Integer(gets.chomp)
-
-year = sekonds / 31556925.9747 # 365 діб 6 годин 9 хв. 9.7676 с.
-month = sekonds / 2548800
-day = sekonds / 86400
-hours = sekonds / 3600
-minutes =  sekonds / 60
-
-puts year.to_s + "y or " + month.to_s + "m or " + day.to_s + "d or " + hours.to_s + "h or " + minutes.to_s + "m"
-
-File.open('formula.txt', 'w') do |f|
-  f.puts "sekonds / ch"  
+class Humen
+	def initialize(name)
+		@name = name
+		@hp = 100
+	end
+	
+	def askName
+		puts @name
+	end
+	
+	def go(to)
+		puts to
+	end
 end
+
+class Hero < Humen
+
+	attr_accessor :test
+	attr_reader :name
+    attr_writer :name
+
+	@@k = 23
+	@s = 15
+	def self.s
+		@s
+	end
+	def self.k
+		@@k
+	end
+
+	def askName		
+		puts 'Hero ' + @name
+	end
+	
+	private
+	
+	def bla
+		@test= 10
+		puts 'Hero ' + @name
+	end	
+end
+
+h = Humen.new('Lz')
+h.askName
+
+h = Hero.new('Lz')
+h.askName
+#h.bla
+
+puts Hero.s
+
+puts Hero.k
+
+puts h.test
+
+h.name = 5
+puts h.name
+
+
+#h.go('dfdf')
+
+#'dfdf'.ff
+
+require 'tk'
+
+root = TkRoot.new do
+	title "blla"
+end
+
+Tk.mainloop
